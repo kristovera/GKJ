@@ -78,11 +78,12 @@
                     <th scope="col">TTL</th>
                  
                     <th scope="col">Waktu</th>
-                    <th scope="col">Hari/Tanggal Sidi</th>
+                    <th scope="col">Tanggal Sidi</th>
 
                     <th scope="col">Tempat</th>
                     <th scope="col">Pendeta</th>
                     <th scope="col">Pendidikan</th>
+                    <th scope="col">Berkas</th>
                 
                     <th scope="col">Status</th>
 
@@ -99,11 +100,17 @@
                                 <td >{{ $s->tempat}},{{ $s->tanggal_jem}}</td>
                              
                                 <td >{{ $s->waktu_sidi }}</td>
-                                <td >{{ $s->hari_sidi }}/{{ $s->tglsidi }}</td>
+                                <td >{{ $s->tglsidi }}</td>
                                 <td >{{ $s->tempat_sidi }}</td>
                                 <td >{{ $s->pendeta_sidi }}</td>
                                 <td >{{ $s->pendidikan }}</td>
-                              
+                                <td>
+                                
+                                <a href="{{ route('sidi.showPdf',['tglsidi'=>$s->tglsidi]) }}" target="_blank">
+                                      Berkas
+                                     </a>
+               
+                               </td>
                                 <td >{{ $s->verif_sidi}}</td>
 
 

@@ -37,39 +37,52 @@ class KeluarController extends Controller
     }
     public function simpan(Request $request){
 
+        $output = new \Symfony\Component\Console\Output\ConsoleOutput(2);
+
+        if($request->hasFile('file'))
+        {
+            $file = $request->file('file');
+            $toPath="keterangan/".$request->tgl_keluar;
 
 
+            if(!File::isDirectory($toPath))
+                File::makeDirectory($toPath, 0777, true, true);
 
-            DB::table('keluar')->insert([
-                
-         
-               'jemaat_id' =>$request->jemaat_id,
-               'tgl_keluar' =>$request->tgl_keluar,
-                'ket_keluar' => $request->ket_keluar,
-
-                'gerejadituju'=>$request->gerejadituju,
-                'alamat_keluar' => $request->alamat_keluar,
-                'notelp_keluar' => $request->notelp_keluar,
-        
+            $file_name = time().'-'.$request->tgl_keluar.'.pdf';
+            $file->move($toPath, $file_name);
             
-     
-
-
+            DB::table('keluar')->insert([
+                'jemaat_id' =>$request->jemaat_id,
+                'tgl_keluar' =>$request->tgl_keluar,
+                 'ket_keluar' => $request->ket_keluar,
+ 
+                 'gerejadituju'=>$request->gerejadituju,
+                 'alamat_keluar' => $request->alamat_keluar,
+                 'notelp_keluar' => $request->notelp_keluar,
+                 'file' =>$file_name
             ]);
-
-
-         
-      
+    
+        
+    }
+    else
+    {
+        $output->writeln("Check file !");
+    }
+        
         return redirect('/Keluar/index');
     }
 
+
+            
+   
+
     
-   public function showPdf($id)
+   public function showPdf($tgl_keluar)
    {
-        $path = 'storage/'.$id;
+        $path = 'keterangan/'.$tgl_keluar;
 
         $file = '/'.DB::table('keluar')
-                        ->where ('id', '=', $id)
+                        ->where ('tgl_keluar', '=', $tgl_keluar)
                         ->pluck('file')[0];
 
     return response()->file($path.$file);

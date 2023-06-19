@@ -110,10 +110,7 @@
             <input type="text" name="pendeta_bap" class="form-control" id="pendeta_bap"    value="{{ $b->pendeta_bap}}" readonly/>
         </div>
         
-        <div class="form-group">
-            <label>Hari</label>
-            <input type="text" name="hari_bap" class="form-control" id="hari_bap"   value="{{ $b->hari_bap}}" readonly/>
-        </div>
+   
         
         <div class="form-group">
             <label>Waktu</label>

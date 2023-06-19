@@ -90,7 +90,7 @@
             
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm" method="POST" action="/Keluar/tambah/simpan">
+              <form id="quickForm" method="POST" action="/Keluar/tambah/simpan"     enctype="multipart/form-data">
                 <div class="card-body">
                
                         @csrf
@@ -138,6 +138,18 @@
         </div>
 
         <div class="row">
+
+<div class="col-md-12">
+    <div class="form-group">
+    <label>Surat Keterangan</label> <br>
+    <i>*File disatukan dalam pdf</i>
+    <br>
+        <input type="file" name="file" placeholder="Choose file" id="file" accept="application/pdf" required>
+          @error('file')
+          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+          @enderror
+    </div>
+</div>
 
 
 

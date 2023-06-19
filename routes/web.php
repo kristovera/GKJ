@@ -170,7 +170,7 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('/Keluar/edit/{id}', [KeluarController::class,'edit']);
     Route::put('/Keluar/ubah/{id}', [KeluarController::class,'update']);
     Route::get('/Keluar/hapus/{id}', [KeluarController::class,'delete']);
-    Route::get('/Keluar/index/showPdf/{id}', [KeluarController::class, 'showPdf'])->name('keluar.showPdf');
+    Route::get('/Keluar/index/showPdf/{tgl_keluar}', [KeluarController::class, 'showPdf'])->name('keluar.showPdf');
     
 
 

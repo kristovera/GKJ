@@ -80,6 +80,7 @@
                         <th scope="col">Alamat</th>
                         <th scope="col">No HP Gereja</th>
                         <th scope="col" >Pekerjaan</th>
+                        <th scope="col" >Berkas</th>
                         <th scope="col" >Status</th>
           
                         <th scope="col" >Aksi</th>
@@ -107,6 +108,13 @@
                                 <td >{{ $k->alamat_keluar}}</td>
                                 <td >{{ $k->notelp_keluar}}</td>
                                 <td >{{ $k->kerja}}</td>
+                                <td>
+                                
+                                <a href="{{ route('keluar.showPdf',['tgl_keluar'=>$k->tgl_keluar]) }}" target="_blank">
+                                      Berkas
+                                     </a>
+               
+                               </td>
                                 <td >{{ $k->verif}}</td>
                              
                                 <td>

@@ -72,12 +72,13 @@
                         <th scope="col">Alamat</th>
                         <th scope="col">No HP</th>
                         <th scope="col">Pendeta</th>
-                        <th scope="col">Hari/Tanggal Baptis</th>
+                        <th scope="col">Tanggal Baptis</th>
                         <th scope="col">Waktu</th>
                        <th scope="col">Tempat Baptis</th>
                        <th scope="col">Nama Ortu</th>
-           
+                       <th scope="col">Berkas</th>
                        <th scope="col">Status</th>
+
                   
 
                   
@@ -99,13 +100,16 @@
                                   <td >{{ $b->nohp_jem}}</td>
                                   <td >{{ $b->pendeta_bap}}</td>
                                  
-                                <td >{{ $b->hari_bap}}/{{ $b->tglbap}}</td>
+                                <td >{{ $b->tglbap}}</td>
 
                                 <td >{{ $b->waktu_bap}}</td>
                                 <td >{{ $b->tempat_bap}}</td>
                                 <td >{{ $b->ayah}} & {{ $b->ibu}}</td>
-                            
-                              =
+                                <td>
+                                
+                                <a href="{{ route('baptis.showPdf',['tglbap'=>$b->tglbap]) }}" target="_blank">
+                                      Berkas
+                                     </a>
                
                                </td>
                                <td >{{ $b->verif}}</td>

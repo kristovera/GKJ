@@ -106,7 +106,7 @@ public function upSidi($id, Request $request) {
 
   
     $si->waktu_sidi =$request->input('waktu_sidi');
-    $si->hari_sidi = $request->input('hari_sidi');
+
     $si->tglsidi= $request->input('tglsidi');
     $si->tempat_sidi = $request->input('tempat_sidi');
     $si->pendeta_sidi = $request->input('pendeta_sidi');
@@ -173,7 +173,7 @@ public function upSidi($id, Request $request) {
     $data = baptis::find($id);
 
         $data->waktu_bap =request('waktu_bap');
-        $data->hari_bap =request('hari_bap');
+
         $data->tglbap =request('tglbap');
         $data->pendeta_bap =request('pendeta_bap');
         $data->verif =request('verif');
