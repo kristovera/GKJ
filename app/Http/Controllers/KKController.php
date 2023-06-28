@@ -114,10 +114,11 @@ return view('KK.create' , compact('jemaat','kode'));
         ])->get();
 
          $jemaat = jemaat::WhereNotExists(function($query) {
-            $query->select(DB::raw(1))
+            $query->select('data')
             ->from('kk')
-            ->whereRaw('kk.jemaat_id = jemaat.id');
-
+            ->whereRaw('kk.jemaat_id = jemaat.id')
+            ->where('jemaat.data','Wafat');
+        
          })->get();
 
         $data = kk::findOrFail($id);

@@ -73,6 +73,19 @@
             
               <!-- /.card-header -->
               <!-- form start -->
+              <br/>
+              {{-- menampilkan error validasi --}}
+                            @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                            
+                            <br/>
               <form id="quickForm" method="POST" action="/Daftar/create/simpan"   enctype="multipart/form-data">
                 <div class="card-body">
                     

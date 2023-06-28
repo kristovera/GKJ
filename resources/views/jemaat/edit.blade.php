@@ -75,7 +75,7 @@
 
 
 
-	            <form action="/jemaat/ubah/{{ $je->id }}" method="post">
+	            <form action="/jemaat/ubah/{{ $je->id }}"  enctype="multipart/form-data" method="post">
               {{ csrf_field() }}
                 @method('PUT')
 
@@ -99,22 +99,14 @@
                <option  value="Karangtengah"{{ $je->wilayah == 'Karangtengah'? 'selected': ''}}>Karangtengah</option>
                </select>
             </div>
-            <div class="form-group">
-                        <label for="data">Status</label> <br>
-                    <div class="form-check form-check-inline">
-                        <label for="data">
-                            <input type="radio" name="data" value="data" id="Permanen"{{$je->data == 'Permanen'? 'checked' : ''}} >Permanen
-                          
-                        </label>
-                        </div>
-                </div>
+         
 
             <label> Status Sidi dan Baptis </label>
         <div class="form-check">
-        <label><input  type ="checkbox" name="status_sidi" id="status_sidi"  value="Belum"{{ $je->status_sidi == 'Belum Sidi'? 'checked': ''}}> Belum Sidi</label><br>
-        <label><input type ="checkbox" name="status_sidi"  id="status_sidi"  value="Sudah"{{ $je->status_sidi == 'Sudah Sidi'? '': ''}}> Sudah Sidi</label> <br>
-        <label><input type ="checkbox" name="status_baptis"   id="status_baptis" value="Belum"{{ $je->status_baptis== 'Belum Baptis'? '': ''}}> Belum Baptis</label><br>
-        <label><input  type ="checkbox" name="status_baptis"  id="status_baptis"   value="Sudah"{{ $je->status_baptis== 'Sudah Baptis'? '': ''}}> Sudah Baptis</label>
+        <label><input  type ="checkbox" name="status_sidi" id="status_sidi"  value="Belum" {{ str_contains($je->status_sidi, 'Belum')  ? 'checked' : '' }}> Belum Sidi</label><br>
+        <label><input type ="checkbox" name="status_sidi"  id="status_sidi"  value="Sudah"{{ str_contains($je->status_sidi, 'Sudah')  ? 'checked' : '' }}> Sudah Sidi</label> <br>
+        <label><input type ="checkbox" name="status_baptis"   id="status_baptis" value="Belum"{{ str_contains($je->status_baptis, 'Belum')  ? 'checked' : '' }}> Belum Baptis</label><br>
+        <label><input  type ="checkbox" name="status_baptis"  id="status_baptis"   value="Sudah"{{ str_contains($je->status_baptis, 'Sudah')? 'checked' : '' }}>Sudah Baptis</label>
 </div>
 
         <div class="form-group">
@@ -196,6 +188,7 @@
         <div class="form-group">
               <label for="pendidikan">Pendidikan</label>
               <select name="pendidikan" id="pendidikan" class="form-control">
+              <option value="Belum" {{ $je->pendidikan == 'Belum'? 'selected': ''}}>Belum</option>
                 <option value="TK" {{ $je->pendidikan == 'TK'? 'selected': ''}}>TK</option>
                 <option value="SD" {{ $je->pendidikan == 'SD'? 'selected': ''}}>SD</option>
                 <option value="SMP" {{ $je->pendidikan == 'SMP'? 'selected': ''}}>SMP</option>
@@ -254,6 +247,7 @@
             <input type="text" name="kerja" class="form-control" value="{{ $je->kerja }}" required />
             </div>
 
+            <div class="row">
 
 
 

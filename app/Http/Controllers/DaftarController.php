@@ -45,6 +45,11 @@ class DaftarController extends Controller
     public function store(Request $request) {
         
         $output = new \Symfony\Component\Console\Output\ConsoleOutput(2);
+        $this->validate($request, [
+            'namalengkap_jem' => 'required|string|unique:jemaat,namalengkap_jem',
+            
+        ]);
+
 
         if($request->hasFile('file'))
         {
@@ -79,6 +84,8 @@ class DaftarController extends Controller
             'nohp_jem' => $request->nohp_jem,
             'statusgereja' => $request->statusgereja,
             'kerja' => $request->kerja,
+            'asal_gereja' => $request->asal_gereja,
+            'alamat_gereja' => $request->alamat_gereja,
             'ilmu' => $request->ilmu,
             'data' => $request->data,
             'wilayah' => $request->wilayah,

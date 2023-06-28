@@ -123,6 +123,7 @@ class JemaatController extends Controller
 
         $jem = jemaat::find($id);
 
+ 
         $jem->induk =$request->input('induk');
         $jem->namalengkap_jem = $request->input('namalengkap_jem');
         $jem->jk_jem  = $request->input('jk_jem');
@@ -145,9 +146,10 @@ class JemaatController extends Controller
         $jem->ibu= $request->input('ibu');
         $jem->pendapatan= $request->input('pendapatan');
         $jem->wilayah = $request->input('wilayah');
-        $jem->data = $request->input('data');
+ 
         $jem->status_sidi = $request->input('status_sidi');
         $jem->status_baptis = $request->input('status_baptis');
+
 
 
             $jem->update();

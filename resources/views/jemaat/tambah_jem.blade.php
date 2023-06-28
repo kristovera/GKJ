@@ -217,6 +217,7 @@
         <label for="pendidikan">Pendidikan</label>
              <select class="form-control" name="pendidikan"  >
                <option>Pilih</option>
+               <option  value="Belum">Belum</option>
                <option  value="TK">TK</option>
                <option  value="SD">SD</option>
                <option  value="SMP">SMP</option>
@@ -279,6 +280,8 @@
                   <div class="form-group">
                   <label>Surat Tanda Sudah Baptis/Sidi</label> <br>
                   <i>*File disatukan dalam pdf</i>
+                  <br>
+                  <i>*Khusus untuk baptis anak bisa mengupload file akta kelahiran</i>
                   <br>
                       <input type="file" name="file" placeholder="Choose file" id="file" accept="application/pdf" required>
                         @error('file')
