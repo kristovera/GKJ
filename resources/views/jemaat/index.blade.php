@@ -68,17 +68,17 @@
                   <th> No </th>
                         <th scope="col">No Induk</th>
 
-                        <th scope="col">Status</th>
+                  
                         <th scope="col">Wilayah</th>
                         <th scope="col">Sidi/Baptis</th>
 
                         <th scope="col">Nama Lengkap</th>
                         <th scope="col">JK</th>
                         <th scope="col">TTL</th>
-                        <th scope="col" >Status</th>
+                        <th scope="col" >Status Perkawinan</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">No Hp</th>
-                        <th scope="col">Status dalam Gereja</th>
+                        <th scope="col">Status Jemaat</th>
 
                         <th scope="col">Pendidikan</th>
                         <th scope="col">Bidang Ilmu</th>
@@ -105,7 +105,7 @@
                                 <td >{{ $data->induk}}</td>
                                 
                             
-                                <td >{{ $data->data}}</td>
+                        
                                 <td >{{ $data->wilayah}}</td>
                                 <td >{{ $data->status_sidi}}/{{ $data->status_baptis}}</td>
 
@@ -113,11 +113,11 @@
                                 <td >{{ $data->jk_jem}}</td>
                                 <td >{{ $data->tempat}} , {{ $data->tanggal_jem}}</td>
 
-                                <td >{{ $data->status_jem}}</td>
+                                <td >{{ $data->status_kawin}}</td>
                                 <td >{{ $data->alamat_jem}},{{ $data->kelurahan_jem}},{{ $data->kecamatan_jem}},{{ $data->kota_jem}}, {{ $data->provinsi_jem}}</td>
                                 <td >{{ $data->nohp_jem}}</td>
 
-                                <td >{{ $data->statusgereja}}</td>
+                                <td >{{ $data->status_jem}}</td>
 
 
                                 <td >{{ $data->pendidikan}}</td>

@@ -37,8 +37,8 @@
                 if(\Session::get('level') == 0)
                 {
                     ?>
-                        <li class="nav-item menu-open">
-                            <a href="/das" class="nav-link active">
+                        <li class="nav-item ">
+                            <a href="/das" class="nav-link {{ Request::is('das') ?'active' : '';}} ">
                               <i class="nav-icon fas fa-tachometer-alt"></i>
                               <p>
                                 Dashboard
@@ -46,19 +46,19 @@
                             </a>
                           </li>
 
-                          <li class="nav-item">
-                              <a href="{{ url('/jemaat/index')}}" class="nav-link">
+                          <li class="nav-item ">
+                              <a href="{{ url('/jemaat/index')}}" class="nav-link {{ Request::is('jemaat/index') ?'active' : '';}}">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                  Data Jemaat
+                                 Mengelola Data Jemaat
                                 </p>
                               </a>
                             </li>
                             <li class="nav-item">
-                              <a href="{{ url('/Baptis/index')}}" class="nav-link">
+                              <a href="{{ url('/Baptis/index')}}" class="nav-link {{ Request::is('Baptis/index') ?'active' : '';}}">
                               <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                  Data Baptis
+                                Mengelola Data Baptis
 
                                 </p>
                               </a>
@@ -66,29 +66,29 @@
                             </li>
 
                           <li class="nav-item">
-                              <a href="{{ url('/Kematian/index')}}" class="nav-link">
+                              <a href="{{ url('/Kematian/index')}}" class="nav-link {{ Request::is('Kematian/index') ?'active' : '';}}">
                               <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                  Data Kematian
+                                Mengelola Data Kematian
                                 </p>
                               </a>
 
                        
                               <li class="nav-item">
-                              <a href="{{ url('/KK/index')}}" class="nav-link">
+                              <a href="{{ url('/KK/index')}}" class="nav-link {{ Request::is('KK/index') ?'active' : '';}}">
                               <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                  Kartu Keluarga
+                                  Mengelola Kartu Keluarga
                                 </p>
                               </a>
                             </li>
 
 
                             <li class="nav-item">
-                                <a href="{{ url('/Sidi/index')}}" class="nav-link">
+                                <a href="{{ url('/Sidi/index')}}" class="nav-link {{ Request::is('Sidi/index') ?'active' : '';}}">
                                 <i class="nav-icon fas fa-copy"></i>
                                   <p>
-                                    Data Sidi
+                                  Mengelola Data Sidi
 
                                   </p>
                                 </a>
@@ -96,20 +96,20 @@
                               </li>
 
                             <li class="nav-item">
-                              <a href="{{ url('/Daftar/index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                              <a href="{{ url('/Daftar/index')}}" class="nav-link {{ Request::is('Daftar/index') ?'active' : '';}}">
+                                <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                  Atestasi Masuk
+                               Mengelola Atestasi Masuk
                                 </p>
                               </a>
                             </li>
 
 
                             <li class="nav-item">
-                              <a href="{{ url('/Keluar/index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                              <a href="{{ url('/Keluar/index')}}" class="nav-link {{ Request::is('Keluar/index') ?'active' : '';}}">
+                                <i class="nav-icon fas fa-copy"></i>
                                 <p>
-                                 Atestasi Keluar
+                               Mengelola Atestasi Keluar
                                 </p>
                               </a>
                             </li>
@@ -119,7 +119,7 @@
                 {
                     ?>
                     <li class="nav-item menu-open">
-                            <a href="/das" class="nav-link active">
+                            <a href="/das" class="nav-link {{ Request::is('das') ?'active' : '';}}">
                               <i class="nav-icon fas fa-tachometer-alt"></i>
                               <p>
                                 Dashboard
@@ -128,18 +128,18 @@
                           </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('/pegawai/cekjem')}}" class="nav-link">
-                              <i class="nav-icon fas fa-copy"></i>
+                            <a href="{{ url('/pegawai/cekjem')}}" class="nav-link {{ Request::is('pegawai/cekjem') ?'active' : '';}}">
+                              <i class="nav-icon fas fa-eye"></i>
                               <p>
-                                Data Jemaat
+                             Melihat Data Jemaat
                               </p>
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="{{ url('/pegawai/cekbap')}}" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <a href="{{ url('/pegawai/cekbap')}}" class="nav-link {{ Request::is('pegawai/cekbap') ?'active' : '';}}">
+                            <i class="nav-icon fas fa-check"></i>
                               <p>
-                                Data Baptis
+                              Verifikasi Data Baptis
 
                               </p>
                             </a>
@@ -147,10 +147,10 @@
                           </li>
                           
                           <li class="nav-item">
-                                <a href="{{ url('/pegawai/ceksidi')}}" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
+                                <a href="{{ url('/pegawai/ceksidi')}}" class="nav-link  {{ Request::is('pegawai/ceksidi') ?'active' : '';}}">
+                                <i class="nav-icon fas fa-check"></i>
                                   <p>
-                                    Data Sidi
+                                  Verifikasi Data Sidi
 
                                   </p>
                                 </a>
@@ -158,29 +158,30 @@
                               </li>
 
                           <li class="nav-item">
-                              <a href="{{ url('/pegawai/cekkem')}}" class="nav-link">
-                              <i class="nav-icon fas fa-copy"></i>
+                              <a href="{{ url('/pegawai/cekkem')}}" class="nav-link {{ Request::is('pegawai/cekkem') ?'active' : '';}}">
+                              <i class="nav-icon fas fa-eye"></i>
                                 <p>
-                                  Data Kematian
+                                Melihat Data Kematian
                                 </p>
                               </a>
 
 
                             <li class="nav-item">
-                              <a href="{{ url('/pegawai/cekmasuk')}}" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                              <a href="{{ url('/pegawai/cekmasuk')}}" class="nav-link {{ Request::is('pegawai/cekmasuk') ?'active' : '';}}">
+                                <i class="nav-icon fas fa-eye"></i>
                                 <p>
-                                  Atestasi Masuk
+                                 Melihat Atestasi Masuk
                                 </p>
                               </a>
                             </li>
 
 
                             <li class="nav-item">
-                              <a href="{{ url('/pegawai/cekkeluar')}}" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
+                              <a href="{{ url('/pegawai/cekkeluar')}}" class="nav-link {{ Request::is('pegawai/cekkeluar') ?'active' : '';}}">
+                                <i class="nav-icon fas fa-check"></i>
+                                
                                 <p>
-                                 Atestasi Keluar
+                                Verifikasi Atestasi Keluar
                                 </p>
                               </a>
                             </li>
@@ -192,8 +193,8 @@
           <li class="nav-item">
             <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();" class="nav-link">
-            <i class="nav-icon fas fa-sign-out"></i>
+            document.getElementById('logout-form').submit();" class="nav-link {{ Request::is('logout') ?'active' : '';}}">
+            <i class="nav-icon fas "></i>
             {{ __('Logout') }}
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

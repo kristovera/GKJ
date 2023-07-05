@@ -77,7 +77,7 @@
 <div class="col">
     <div class="card shadow my-3">
         <div class="card-header bg-blue text-black">
-            <h6>Presentasi Jenis Kelamin</h6>
+            <h6> Persentase Jenis Kelamin</h6>
         </div>
         <div class="card-body">
             <div id="jk">
@@ -88,7 +88,7 @@
 <div class="col">
     <div class="card shadow my-3">
         <div class="card-header bg-blue text-black">
-            <h6>Presentasi Status Gereja</h6>
+            <h6> Persentase Status Jemaat</h6>
         </div>
         <div class="card-body">
             <div id="status">
@@ -110,7 +110,7 @@
 
     <div class="card shadow my-3">
                     <div class="card-header bg-blue text-black">
-                        <h6>Presentasi Data Sidi dan Baptis</h6>
+                        <h6> Persentase Data Sidi dan Baptis</h6>
                     </div>
                     <div class="card-body">
                         <div id="jum_sidi">
@@ -122,19 +122,16 @@
             <div class="col-sm-6">
                 <div class="card shadow my-3">
                     <div class="card-header bg-blue text-black">
-                        <h6>Presentasi Status Perkawinan</h6>
+                        <h6> Persentase Status Perkawinan</h6>
                     </div>
                     <div class="card-body">
                         <div id="kawin">
                         </div>
                     </div>
                 </div>  
+</div>
+</div>
 
-
-
-
-
-       
 
 <!-- jQuery -->
 <script src="{{asset('assets/Admin/plugins/jquery/jquery.min.js')}}"></script>

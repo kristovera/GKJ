@@ -59,6 +59,7 @@ class KeluarController extends Controller
                  'gerejadituju'=>$request->gerejadituju,
                  'alamat_keluar' => $request->alamat_keluar,
                  'notelp_keluar' => $request->notelp_keluar,
+                 
                  'file' =>$file_name
             ]);
     

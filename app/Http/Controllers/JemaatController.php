@@ -91,10 +91,10 @@ class JemaatController extends Controller
                 'kota_jem'=>$request->kota_jem,
                 'provinsi_jem'=>$request->provinsi_jem,
                 'nohp_jem' => $request->nohp_jem,
-                'statusgereja' => $request->statusgereja,
+                'status_kawin' => $request->status_kawin,
                 'kerja' => $request->kerja,
                 'ilmu' => $request->ilmu,
-                'data' => $request->data,
+             //   'data' => $request->data,
                 'wilayah' => $request->wilayah,
                 'ayah' => $request->ayah,
                 'ibu' => $request->ibu,
@@ -137,7 +137,7 @@ class JemaatController extends Controller
         $jem->provinsi_jem =$request->input('provinsi_jem');
         $jem->nohp_jem = $request->input('nohp_jem');
 
-        $jem->statusgereja = $request->input('statusgereja');
+        $jem->status_kawin = $request->input('status_kawin');
         $jem->kerja = $request->input('kerja');
         $jem->pendidikan = $request->input('pendidikan');
         $jem->ilmu = $request->input('ilmu');

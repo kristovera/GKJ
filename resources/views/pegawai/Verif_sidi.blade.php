@@ -109,7 +109,7 @@
 
             <div class="form-group">
             <label>Waktu</label>
-            <input type="text" name="waktu_sidi" class="form-control"  id="waktu_sidi"  value="{{ $s->waktu_sidi}}"/>
+            <input type="time" name="waktu_sidi" class="form-control"  id="waktu_sidi"  value="{{ $s->waktu_sidi}}"/>
         </div>
 
       
@@ -137,6 +137,11 @@
                             
                             </select>
                         </div>
+                        <div class="form-group">
+            <label>Catatan</label>
+            <input type="text" name="catatan" class="form-control"  id="catatan"  value="{{ $s->catatan}}"/>
+        </div>
+
 
 
         

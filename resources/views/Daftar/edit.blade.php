@@ -145,12 +145,12 @@
             <input type="date" name="tanggal_jem" class="form-control" value="{{ $data->tanggal_jem}}"  required />
         </div> 
         <div class="form-group">
-              <label for="status_jem">Status</label>
-              <select name="status_jem" id="status_jem" class="form-control">
-                <option value="Belum Menikah" {{ $data->status_jem == 'Belum Menikah'? 'selected': ''}}>Belum Menikah</option>
-                <option value="Menikah" {{ $data->status_jem == 'Menikah'? 'selected': ''}}>Menikah</option>
-                <option value="Janda" {{ $data->status_jem == 'Janda'? 'selected': ''}}>Janda</option>
-                <option value="Duda" {{ $data->status_jem == 'Duda'? 'selected': ''}}>Duda</option>
+              <label for="status_jem">Status Prkawinan</label>
+              <select name="status_kawin" id="status_kawin" class="form-control">
+                <option value="Belum Menikah" {{ $data->status_kawin == 'Belum Menikah'? 'selected': ''}}>Belum Menikah</option>
+                <option value="Menikah" {{ $data->status_kawin == 'Menikah'? 'selected': ''}}>Menikah</option>
+                <option value="Janda" {{ $data->status_kawin == 'Janda'? 'selected': ''}}>Janda</option>
+                <option value="Duda" {{ $data->status_kawin == 'Duda'? 'selected': ''}}>Duda</option>
               </select>
             </div>
      
@@ -189,8 +189,8 @@
         </div> 
          
         <div class="form-group">
-              <label for="statusgereja">Status Gereja</label>
-              <select name="statusgereja" id="statusgereja" class="form-control">
+              <label for="statusgereja">Status Jemaat</label>
+              <select name="statusgereja" id="status_jem" class="form-control">
                 <option value="Jemaat" {{ $data->statusgereja == 'Jemaat'? 'selected': ''}}>Jemaat</option>
                 <option value="Simpatisan" {{ $data->statusgereja == 'Simpatisan'? 'selected': ''}}>Simpatisan</option>
               

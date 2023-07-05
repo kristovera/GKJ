@@ -10,7 +10,7 @@ class jemaat extends Model
     protected $table = 'jemaat';
     protected $fillable = ['id','induk','namalengkap_jem','tempat','tanggal_jem',
     'status_jem','alamat_jem','kelurahan_jem','kecamatan_jem','kota_jem',
-     'provinsi_jem','nohp_jem','statusgereja','pendidikan','kerja','pendapatan','ayah','ibu',
+     'provinsi_jem','nohp_jem','status_kawin','pendidikan','kerja','pendapatan','ayah','ibu',
      'ilmu','wilayah','file','status_sidi','status_baptis'];
 
 

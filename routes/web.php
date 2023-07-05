@@ -85,6 +85,7 @@ Route::group(['middleware' => ['auth']], function()
 
     Route::get('/pie', [PieController::class,'index']);
     Route::get('/das', [PieController::class,'perkawinan']);
+    //Route::get('/das', [PieController::class,'grafik']);
     Route::get('/das/{year}', [PieController::class,'getYear'])->name("get.year");
     //Route::get('/pie', [PieController::class,'status']);
 
@@ -118,8 +119,10 @@ Route::group(['middleware' => ['auth']], function()
     Route::get('/KK/tambah_view/{id}', [KKController::class,'tambah_kk']);
     Route::post('/KK/index', [KKController::class,'simpan_kk']);
 
-    Route::get('/Detail/edit/{id}', [KKController::class,'edit']);
-    Route::put('/Detail/ubah/{id}', [KKController::class,'update']);
+   // Route::get('/KK/delete/{id}', [KKController::class,'delete']);
+
+    //Route::get('/Detail/edit/{id}', [KKController::class,'edit']);
+    //Route::put('/Detail/ubah/{id}', [KKController::class,'update']);
 
  
 

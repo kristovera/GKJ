@@ -118,6 +118,13 @@
             <label>Tanggal Baptis</label>
             <input type="date" name="tglbap" class="form-control" id="tglbap"  required/>
         </div>
+        <label> Status Sidi dan Baptis </label>
+        <div class="form-check">
+        <label><input  type ="checkbox" name="status_sidi" id="status_sidi"  value="Belum" {{ str_contains($je->status_sidi, 'Belum')  ? 'checked' : '' }}> Belum Sidi</label><br>
+        <label><input type ="checkbox" name="status_sidi"  id="status_sidi"  value="Sudah"{{ str_contains($je->status_sidi, 'Sudah')  ? 'checked' : '' }}> Sudah Sidi</label> <br>
+        <label><input type ="checkbox" name="status_baptis"   id="status_baptis" value="Belum"{{ str_contains($je->status_baptis, 'Belum')  ? 'checked' : '' }}> Belum Baptis</label><br>
+        <label><input  type ="checkbox" name="status_baptis"  id="status_baptis"   value="Sudah"{{ str_contains($je->status_baptis, 'Sudah')? 'checked' : '' }}>Sudah Baptis</label>
+</div>
 
         <div class="form-group">
             <label>Pendeta</label>

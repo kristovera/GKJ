@@ -68,7 +68,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <a href="/Sidi/tambah_sidi" class="btn btn-success my-3" target="_blank">Add</a><br>
+              <a href="/Sidi/tambah_sidi" class="btn btn-success my-3" target="_blank">Tambah Data</a><br>
               <table id="sidi" class="table table-bordered table-hover">
 
               <thead>
@@ -86,9 +86,12 @@
                     <th scope="col">Pendeta</th>
                     <th scope="col">Pendidikan</th>
                     <th scope="col">No HP</th>
-                    <th scope="col">Verif</th>
                     <th scope="col">Berkas</th>
 
+                    <th scope="col">Status</th>
+                    <th scope="col">Catatan</th>
+                    
+          
                         <th scope="col">Aksi</th>
                       </tr>
               </thead>
@@ -107,7 +110,7 @@
                                 <td >{{ $s->pendeta_sidi }}</td>
                                 <td >{{ $s->pendidikan }}</td>
                                 <td >{{ $s->nohp_jem}}</td>
-                                <td >{{ $s->verif_sidi}}</td>
+                           
                            
                                 <td>
                                 
@@ -116,6 +119,8 @@
                                      </a>
                
                                </td>
+                               <td >{{ $s->verif_sidi}}</td>
+                               <td >{{ $s->catatan}}</td>
 
                                 <td>
 

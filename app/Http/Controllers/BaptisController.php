@@ -52,6 +52,8 @@ class BaptisController extends Controller
             $file_name = time().'-'.$request->tglbap.'.pdf';
             $file->move($toPath, $file_name);
 
+          
+
             DB::table('baptis')->insert([
                 'waktu_bap' =>$request->waktu_bap,
             
@@ -60,6 +62,7 @@ class BaptisController extends Controller
                 'jemaat_id' =>$request->jemaat_id,
                 'file' => $file_name,
                 'tempat_bap'=>$request->tempat_bap,
+
             ]);
     
         

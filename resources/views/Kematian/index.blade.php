@@ -78,7 +78,7 @@
               <!-- /.card-header -->
 
               <div class="card-body">
-              <a href="/Kematian/create" class="btn btn-success my-3" target="_blank">Add</a><br>
+              <a href="/Kematian/create" class="btn btn-success my-3" target="_blank">Tambah Data</a><br>
               <table id="mati" class="table table-bordered table-hover">
                   <thead>
                   <tr>

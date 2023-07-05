@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return \Session::get('level') == 0? view('admin') : (new PegawaiController)->baptis();
+        return \Session::get('level') == 0? view('admin') : (new PegawaiController)->jemaat();
     }
 
     public function admin()

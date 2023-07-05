@@ -60,7 +60,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <a href="/Keluar/tambah" class="btn btn-success my-3" target="_blank">Add</a><br>
+              <a href="/Keluar/tambah" class="btn btn-success my-3" target="_blank">Tambah Data</a><br>
                 <table id="keluar" class="table table-bordered table-hover">
                   <thead>
                   <tr>
@@ -82,6 +82,7 @@
              
                         <th scope="col" >Berkas</th>
                         <th scope="col" >Status</th>
+                        <th scope="col" >Catatan</th>
                   
                         <th scope="col" >Aksi</th>
                     
@@ -115,6 +116,7 @@
                
                                </td>
                                 <td >{{ $k->verif}}</td>
+                                <td >{{ $k->catatan}}</td>
                             
                             
                                 <td>

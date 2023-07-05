@@ -25,7 +25,6 @@ class PegawaiController extends Controller
 
     }
 
-
     
     public function masuk(Request $request)
     {
@@ -171,15 +170,11 @@ public function upSidi($id, Request $request) {
     //    $data= baptis::findOrFail($id);
     
     $data = baptis::find($id);
+    $data->verif = $request->input('verif');
+    $data->waktu_bap = $request->input('waktu_bap');
+    $data->tglbap= $request->input('tglbap');
+    $data->pendeta_bap = $request->input('pendeta_bap');
 
-        $data->waktu_bap =request('waktu_bap');
-
-        $data->tglbap =request('tglbap');
-        $data->pendeta_bap =request('pendeta_bap');
-        $data->verif =request('verif');
-     
-        $data->jemaat_id = request('jemaat_id');
-      //  $data->save();
         $data->update();
         return redirect('/pegawai/cekbap');
     }

@@ -131,6 +131,7 @@
                         <th scope="col" >Nama </th>
                         <th scope="col" >Status Dalam Keluarga </th>
                         <th scope="col" >Pendidikan</th>
+                      
 
 
               
@@ -148,9 +149,7 @@
                               
                                 <td >{{ $k->pendidikan}}</td>
 
-                        </td>
-                      
-
+                
 
 
                             </tr>

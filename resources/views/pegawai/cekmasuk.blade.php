@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Masuk Gereja</title>
+  <title>Atestasi</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -67,7 +67,7 @@
                        <th>No </th>
                        
                         <th scope="col">Tanggal Masuk</th>
-                        <th scope="col">Status</th>
+                    
                         <th scope="col">Gereja</th>
                       
                         <th scope="col">No Induk</th>
@@ -75,12 +75,12 @@
                         <th scope="col">Nama Lengkap</th>
                         <th scope="col">JK</th>
                         <th scope="col">TTL</th>
-                        <th scope="col" >Status</th>
+                        <th scope="col" >Status Perkawinan</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">No Hp</th>
                         <th scope="col">Gereja Asal</th>
                         <th scope="col">Alamat Gereja Asal</th>
-                        <th scope="col">Status dalam Gereja</th>
+                        <th scope="col">Status Jemaat</th>
                         <th scope="col">Pendidikan</th>
                         <th scope="col">Bidang Ilmu</th>
                       
@@ -90,6 +90,7 @@
 
                         <th scope="col">Pekerjaan</th>
                         <th scope="col">Pendapatan</th>
+                        <th scope="col">Berkas</th>
                     
                   
                     
@@ -103,7 +104,7 @@
 
                                
                                 <td >{{ $data->tgl_masuk}}</td>
-                                <td >{{ $data->data}}</td>
+                        
                                 <td >{{ $data->asal_gereja}} - {{ $data->alamat_gereja}}</td>
                                 <td >{{ $data->induk}}</td>
                                 <td >{{ $data->wilayah}}</td>
@@ -111,13 +112,13 @@
                                 <td >{{ $data->jk_jem}}</td>
                                 <td >{{ $data->tempat}} , {{ $data->tanggal_jem}}</td>
                             
-                                <td >{{ $data->status_jem}}</td>
+                                <td >{{ $data->status_kawin}}</td>
                                 <td >{{ $data->alamat_jem}},{{ $data->kelurahan_jem}},{{ $data->kecamatan_jem}},{{ $data->kota_jem}}, {{ $data->provinsi_jem}}</td>
                                 <td >{{ $data->nohp_jem}}</td>
                                 <td >{{ $data->asal_gereja}}</td>
                                 <td >{{ $data->alamat_gereja}}</td>
                             
-                                <td >{{ $data->statusgereja}}</td>
+                                <td >{{ $data->status_jem}}</td>
                                 <td >{{ $data->pendidikan}}</td>
                                 <td >{{ $data->ilmu}}</td>
 
@@ -126,6 +127,10 @@
                                 <td >{{ $data->ibu}}</td>
                                 <td >{{ $data->kerja}}</td>
                                 <td >{{ $data->pendapatan}}</td>
+                                <td>   
+                                <a  href="{{ route('jemaat.showPdf',['induk'=>$data->induk]) }}" class="fas fa-eye" data-toggle="tooltip" ></i></a>
+                              </td>
+
                               
                              
                             </tr>   

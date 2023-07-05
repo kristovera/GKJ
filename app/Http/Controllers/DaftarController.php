@@ -82,7 +82,7 @@ class DaftarController extends Controller
             'kota_jem'=>$request->kota_jem,
             'provinsi_jem'=>$request->provinsi_jem,
             'nohp_jem' => $request->nohp_jem,
-            'statusgereja' => $request->statusgereja,
+            'status_kawin' => $request->status_kawin,
             'kerja' => $request->kerja,
             'asal_gereja' => $request->asal_gereja,
             'alamat_gereja' => $request->alamat_gereja,

@@ -145,6 +145,11 @@
                             
                             </select>
                         </div>
+                        <div class="form-group">
+            <label>Catatan</label>
+            <input type="text" name="catatan" class="form-control"  id="catatan"  value="{{ $s->catatan}}"/>
+        </div>
+
 
         
 

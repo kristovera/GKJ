@@ -155,17 +155,18 @@ return view('KK.create' , compact('jemaat','kode'));
     }   
     public function delete($id)
     {
-        $kk= jemaat::find($id);
-        $kk->delete();
+      
+        DetailKartuKeluarga::find($id)->delete();
 
         return redirect('/KK/index/view')->with('success');  
     }
 
+    //kepala keluarga
     public function hapus($id)
     {
         kk::find($id)->delete();
         
-
+        return redirect('/KK/index')->with('success');  
     }
 
 

@@ -78,6 +78,7 @@
                        <th scope="col">Nama Ortu</th>
                        <th scope="col">Berkas</th>
                        <th scope="col">Status</th>
+                       <th scope="col">Catatan</th>
 
                   
 
@@ -113,6 +114,7 @@
                
                                </td>
                                <td >{{ $b->verif}}</td>
+                               <td >{{ $b->catatan}}</td>
                             
                                 <td>
                                 <a  href="/pegawai/Verif_bap/{{$b->id}}" class="fas fa-edit" data-toggle="tooltip" ></i></a> 

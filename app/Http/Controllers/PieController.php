@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
+
 class PieController extends Controller
 {
     public function __construct()
@@ -20,16 +21,14 @@ class PieController extends Controller
         return view('pie');
     }
 
-
-
     
     function perkawinan()
     {
       $data = DB::table('jemaat')
        ->select(
-        DB::raw('status_jem as kawin'),
+        DB::raw('status_kawin as kawin'),
         DB::raw('count(*) as number'))
-       ->groupBy('status_jem')
+       ->groupBy('status_kawin')
        ->get();
      $array[] = ['Status Perkawinan', 'Number'];
      foreach($data as $key => $value)
@@ -70,11 +69,11 @@ class PieController extends Controller
     {
       $data = DB::table('jemaat')
        ->select(
-        DB::raw('statusgereja as status'),
+        DB::raw('status_as status'),
         DB::raw('count(*) as number'))
-       ->groupBy('statusgereja')
+       ->groupBy('status_jem')
        ->get();
-     $array[] = ['Status Gereja', 'Number'];
+     $array[] = ['Status Jemaat', 'Number'];
      foreach($data as $key => $value)
      {
       $array[++$key] = [$value->status, $value->number];
@@ -194,11 +193,11 @@ class PieController extends Controller
     {
         $data = DB::table('jemaat')
            ->select(
-            DB::raw('statusgereja as status'),
+            DB::raw('status_jem as status'),
             DB::raw('count(*) as number'))
-           ->groupBy('statusgereja')
+           ->groupBy('status_jem')
            ->get();
-         $array[] = ['Status Gereja', 'Number'];
+         $array[] = ['Status Jemaat', 'Number'];
          foreach($data as $key => $value)
          {
           $array[++$key] = [$value->status, $value->number];

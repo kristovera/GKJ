@@ -86,6 +86,7 @@
                     <th scope="col">Berkas</th>
                 
                     <th scope="col">Status</th>
+                    <th scope="col">Catatan</th>
 
 
 
@@ -112,6 +113,7 @@
                
                                </td>
                                 <td >{{ $s->verif_sidi}}</td>
+                                <td >{{ $s->Catatan}}</td>
 
 
 

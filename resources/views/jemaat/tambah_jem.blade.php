@@ -119,13 +119,7 @@
                </select>
 
         </div>
-        <div class="form-group">
-        <label for="data" class="col-md-5 control-label">Status Jemaat <b style="color:Tomato;">*</b>  </label>
-        <label>
-          <input type="radio" name="data" value="Permanen" required>
-            Permanen
-           </label>
-</div>
+    
         <label> Status Sidi dan Baptis </label>
         <div class="form-check">
         <label><input type ="checkbox" name="status_sidi" value="Belum"> Belum Sidi</label><br>
@@ -159,8 +153,8 @@
             <input type="date" name="tanggal_jem" class="form-control"  required />
 </div>
 <div class="form-group">
-        <label for="status_jem">Status</label>
-             <select class="form-control" name="status_jem"  >
+        <label for="status_kawin">Status Perkawinan</label>
+             <select class="form-control" name="status_kawin"  >
                <option>Pilih</option>
                <option  value="Belum Menikah ">Belum Menikah</option>
                <option  value="Menikah">Menikah</option>
@@ -203,8 +197,8 @@
             </div>
 
         <div class="form-group">
-        <label for="statusgereja">Status Gereja</label>
-             <select class="form-control" name="statusgereja"  >
+        <label for="status_jem">Status Gereja</label>
+             <select class="form-control" name="status_jem"  >
                <option>Pilih</option>
                <option  value="jemaat">Jemaat</option>
                <option  value="simpatisan">Simpatisan</option>
