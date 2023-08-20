@@ -113,7 +113,7 @@
                
                                </td>
                                 <td >{{ $s->verif_sidi}}</td>
-                                <td >{{ $s->Catatan}}</td>
+                                <td >{{ $s->catatan}}</td>
 
 
 

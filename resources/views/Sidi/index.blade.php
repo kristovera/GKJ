@@ -75,7 +75,7 @@
                     <tr>
                     <th scope="col">No </th>
                     <th scope="col">No Induk</th>
-                    <th scope="col">Status</th>
+             
                     <th scope="col">Nama Lengkap</th>
                     <th scope="col">TTL</th>
                 
@@ -100,7 +100,7 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td >{{ $s->induk}}</td>
-                                <td >{{ $s->data }}</td>
+                         
                                 <td >{{ $s->namalengkap_jem }}</td>
                                 <td >{{ $s->tempat}},{{ $s->tanggal_jem}}</td>
                          

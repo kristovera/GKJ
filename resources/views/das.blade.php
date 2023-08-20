@@ -88,7 +88,7 @@
 <div class="col">
     <div class="card shadow my-3">
         <div class="card-header bg-blue text-black">
-            <h6> Persentase Status Jemaat</h6>
+            <h6> Persentase Status Keanggotaan</h6>
         </div>
         <div class="card-body">
             <div id="status">
@@ -110,7 +110,7 @@
 
     <div class="card shadow my-3">
                     <div class="card-header bg-blue text-black">
-                        <h6> Persentase Data Sidi dan Baptis</h6>
+                        <h6> Persentase Status Jemaat</h6>
                     </div>
                     <div class="card-body">
                         <div id="jum_sidi">

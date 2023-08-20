@@ -11,7 +11,7 @@ class sidi extends Model
     protected $table='sidi';
     protected $fillable =  [
 
-      'id','jemaat_id','tempat_sidi','hari_sidi','tglsidi','waktu_sidi','pendeta_sidi','verif_sidi'
+      'id','jemaat_id','tempat_sidi','hari_sidi','tglsidi','waktu_sidi','pendeta_sidi','verif_sidi','catatan'
 
     ];
     public function jemaat()

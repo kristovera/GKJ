@@ -110,6 +110,7 @@ public function upSidi($id, Request $request) {
     $si->tempat_sidi = $request->input('tempat_sidi');
     $si->pendeta_sidi = $request->input('pendeta_sidi');
     $si->verif_sidi = $request->input('verif_sidi');
+    $si->catatan = $request->input('catatan');
    
         $si->update();
 

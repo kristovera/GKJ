@@ -23,7 +23,7 @@ class BaptisController extends Controller
          return view('Baptis.index',compact('data'));
 
     }
-   
+
 
     public function create() {
 
